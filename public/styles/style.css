@@ -6,8 +6,11 @@
     margin-top: 1.5em;
  }
  .header-form {
-     background-color: #d99e6b;
+     background-color: #70dede;
  }
  /* .contact {
 
  } */
+ .contact-item-action-area {
+     float: right;
+ }

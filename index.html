@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Basic Phonebook using Javascript</title>
-    <link rel="stylesheet" type="text/css" href="public/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/bootstrap.min.css">   
     <link rel="stylesheet" type="text/css" href="public/styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -17,10 +17,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-7">
                 <div class="list-group" id="contactList">
-                    <div class="list-group-item header-form">
+                    <div class="list-group-item header-form" onclick="event.stopPropagation()">
                         <form class="form-inline">
+                            <input type="hidden" id="inpId">
                             <div class="form-group mb-2">
                                 <label for="inpName" class="sr-only">Name</label>
                                 <input type="text" class="form-control" id="inpName" placeholder="Name">
@@ -31,6 +32,8 @@
                                     placeholder="Phone no.">
                             </div>
                             <input type="button" class="btn btn-primary mb-2" id="btnAddContact" value="Add">
+                            &nbsp;
+                            <input type="button" class="btn btn-warning mb-2" id="btnReset" value="Reset">
                         </form>
                     </div>
                     <div class="alert alert-danger" id="contactEntryError">
