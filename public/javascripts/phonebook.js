@@ -28,6 +28,7 @@ contactList.addEventListener('onEditRequest', (event) => {
     inpName.value = event.srcElement.parentNode.parentNode.dataset.name;
     inpPhone.value = event.srcElement.parentNode.parentNode.dataset.phoneno;
     btnAddContact.value = 'Modify';
+    btnReset.value = 'Cancel';
     event.srcElement.disabled = true;
     event.srcElement.nextSibling.disabled = true;
 });
@@ -71,6 +72,8 @@ btnReset.addEventListener('click', (event) => {
     inpPhone.value = '';
     inpId.value = '';
     btnAddContact.value = 'Add';
+    btnReset.value = 'Reset';
+    this.setError(null);
     inpName.focus();
 });
 
