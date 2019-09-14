@@ -1,3 +1,8 @@
+setInterval(() => {
+    var dt = new Date();
+    document.getElementById('dvClock').innerText
+        = dt.toLocaleDateString() + ' ' + dt.toLocaleTimeString();
+}, 1000);
 
 var appCaption = document.getElementById("appCaption");
 appCaption.innerText = document.title;
@@ -137,6 +142,12 @@ function setError(message) {
     contacts.forEach(element => {
         element.style.display = alertBox.style.display === '' ? 'none' : '';
     });
+
+    if (alertBox.style.display === '') {
+        setTimeout(() => {
+            setError(null);
+        }, 1500);
+    }
 };
 
 class contact {
