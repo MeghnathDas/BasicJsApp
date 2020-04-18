@@ -2,7 +2,7 @@
 ###### Author: Meghnath Das
 
 ### Technologies Used
-- Pure JavaScript, 
+- Pure JavaScript
 - Bootstrap
 - GitHub Hosting
 
